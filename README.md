@@ -30,6 +30,9 @@ prevent browsers from thinking that it might be an HTML response.
     // or, to have express-safe-json require() express on its own, simply:
     require('express-safe-json')()
 
+    // Then, you can just use res.send(<object>) and res.json(<object>)
+    // as you normally do.
+
 ### License
 
 MIT
