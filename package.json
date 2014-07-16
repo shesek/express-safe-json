@@ -1,0 +1,14 @@
+{
+  "name": "express-safe-json",
+  "version": "0.1.0",
+  "description": "Prevent HTML tags from rendering in JSON responses.",
+  "repository": "https://github.com/shesek/express-safe-json",
+  "keywords": [
+    "express",
+    "xss",
+    "json",
+    "html"
+  ],
+  "author": "Nadav Ivgi <nadav@bitrated.com>",
+  "license": "MIT"
+}
