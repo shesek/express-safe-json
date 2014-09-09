@@ -1,5 +1,3 @@
-var toString = Object.prototype.toString
-
 module.exports = function (express) {
   express || (express = require('express'))
   var send = express.response.send
