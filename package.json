@@ -10,5 +10,9 @@
     "html"
   ],
   "author": "Nadav Ivgi <nadav@bitrated.com>",
+  "contributors": [{
+    "name": "Tyler Waters",
+    "email": "tyler.waters@gmail.com"
+  }],
   "license": "MIT"
 }
