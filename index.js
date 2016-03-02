@@ -4,14 +4,15 @@ module.exports = function (express) {
   express || (express = require('express'))
   var send = express.response.send
 
-  express.response.send = function(code, body) {
-    body == null && (body=code, code=null)
-
-    if (is.is(this.get('Content-Type'), 'json') && typeof body === 'string')
-      body = body.replace(/</g, '\\u003c')
-
-    return code
-      ? send.call(this, code, body)
-      : send.call(this, body)
+  express.response.send = function(body) {
+    return send.call(this, matchReq(this, body) ? escapeBody(body) : body)
   }
+}
+
+function matchReq(res, body) {
+  return is.is(res.get('Content-Type'), 'json') && typeof body === 'string';
+}
+
+function escapeBody(body) {
+  return body.replace(/</g, '\\u003c')
 }
