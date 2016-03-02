@@ -10,5 +10,8 @@
     "html"
   ],
   "author": "Nadav Ivgi <nadav@bitrated.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "type-is": "^1.6.12"
+  }
 }

@@ -1,3 +1,5 @@
+var is = require('type-is')
+
 module.exports = function (express) {
   express || (express = require('express'))
   var send = express.response.send
@@ -5,7 +7,7 @@ module.exports = function (express) {
   express.response.send = function(code, body) {
     body == null && (body=code, code=null)
 
-    if (this.get('Content-Type') === 'application/json' && typeof body === 'string')
+    if (is.is(this.get('Content-Type'), 'json') && typeof body === 'string')
       body = body.replace(/</g, '\\u003c')
 
     return code
