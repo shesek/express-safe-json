@@ -10,7 +10,7 @@ module.exports = function (express) {
 }
 
 function matchReq(res, body) {
-  return is.is(res.get('Content-Type'), 'json') && typeof body === 'string';
+  return is.is(res.get('Content-Type'), 'json') && typeof body === 'string'
 }
 
 function escapeBody(body) {
