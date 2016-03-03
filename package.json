@@ -13,5 +13,12 @@
   "license": "MIT",
   "dependencies": {
     "type-is": "^1.6.12"
+  },
+  "scripts": {
+    "test": "mocha test.js"
+  },
+  "devDependencies": {
+    "mocha": "^2.4.5",
+    "supertest": "^1.2.0"
   }
 }
